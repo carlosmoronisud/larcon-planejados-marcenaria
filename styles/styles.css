@@ -1,0 +1,363 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;      
+}
+body{                    
+    box-sizing: content-box;    
+    background-color: black;
+    width: 100%;        
+}
+.container {
+    width: 90%; /* Ajustado para 90% */
+    margin: 0 auto; /* Centralizado horizontalmente */
+}
+.logo {
+    width: 100%;
+    height: auto;
+    margin-right: 20px; /* Espaçamento entre logo e nav */
+}
+nav{
+    margin: 10px;
+    font-size: 50%;   
+}
+a{
+    margin: 5px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: #00587A;
+    border-radius: 40px;
+}
+.ap {
+    position: relative; /* Define posição relativa para os elementos internos */
+    height: 100vh; /* Altura da seção */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+    margin-bottom: 50px;
+}
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.content{
+    font-size: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.btnOrc {
+    font-size: 100%;
+    padding: 5px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+.btnOrc:hover {
+    background-color: #00587A;
+}
+#sobre,
+#orc,
+#fotosRacks,
+#fotosCoz,
+#loc{
+    position: relative; /* Define posição relativa para os elementos internos */
+    height: 100vh; /* Altura da seção */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+    margin-bottom: 50px;
+}
+.fundoSobre,
+.fundoOrc,
+.fundoRacks,
+.fundoCoz,
+.fundoLoc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;    
+}
+.cardSobre,
+.cardLoc{
+    position: absolute;
+    display: flex;
+    top: 10%;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    border: 30px solid rgba(0, 0, 0, 0.555);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.74);
+    overflow: hidden;
+}
+.imgsobre{
+    border-radius: 20px;
+    width: 65%;
+    padding: 3px;
+}
+.textoSobre,
+.textoLoc{
+    width: 50%;
+    padding: 20px; /* Adicione algum preenchimento para espaçamento */
+    color: white;
+    font-size: 2rem;
+    overflow: auto; /* Adicione scroll quando o texto for muito longo */
+}
+form{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 10%;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    border: 30px solid rgba(0, 0, 0, 0.555);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.74);
+    overflow: hidden; 
+    gap: 20px;
+}
+.inputText{
+    width: 50%; 
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+    gap: 0%;
+}
+.textArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+input,
+textarea{
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.555);
+    font-size: 1.5rem;
+    background-color: transparent    
+}
+#enviar:hover{
+    background-color: #00587A;
+    color: #ffffff;
+    cursor: pointer;    
+}
+#enviar{
+    padding: 10px;   
+}
+.textoRacks,
+.textoCoz {
+    font-size: 2rem; /* Reduzindo o tamanho da fonte */
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    background-color: #0000007a;
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 2;
+}
+.slide{
+    width: 100%;
+    display: none; /* Oculta os slides por padrão */
+}
+#prevBtnCoz,
+#nextBtnCoz,
+#prevBtnSala,
+#nextBtnSala{
+    color: rgb(255, 255, 255);
+    font-size: 50px ;
+    background-color: #00000085;
+    padding: 1%;
+    border-radius: 40px;
+    border: 1px solid white;
+}
+.carrocelSalas,
+.carouselCoz{
+    position: absolute;
+    display: flex;
+    justify-content: center;   
+    top: 10%;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    border: 30px solid rgba(0, 0, 0, 0.555);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.74);
+    overflow: hidden; 
+    gap: 20px;
+}
+.loc{
+   width: 50vw;
+   display: flex;   
+   align-items: center; 
+}
+.social{
+    position: fixed;
+    right: 5px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;    
+}
+.dados {
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between;
+    font-size: 2rem;   
+    border-radius: 10px;
+    padding: 10px; /* Adiciona algum preenchimento */
+}
+.nome {
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente */
+}
+.nome{
+    margin-left: 10px; /* Adiciona algum espaço entre o logo e o texto */
+}
+
+.Telefone {
+    text-align: right; /* Centraliza o texto */
+}
+.autor{
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 10px; 
+}
+.autor:hover{
+    background-color: #00587A;
+    border-radius: 10px;
+}
+.nome-header {
+    margin: 10px;
+    display: flex;
+    align-items: center; 
+}
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px; /* Espaçamento entre logo e nav */
+}
+.nome-header {
+    font-size: 1.5rem;
+    
+}
+
+.nome-header h3 {
+    margin-left: 5px; /* Adiciona algum espaço entre a logo e o texto */
+    margin-right: 50px;
+}
+#prevBtnSala,
+#prevBtnCoz{
+    position: absolute;
+    top: 50%;
+    left: 0;    
+}
+#nextBtnSala,
+#nextBtnCoz{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.whats,
+.instagram,
+.facebook{
+    width: 4vw;    
+}
+#sobe{
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    width: 7vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    transform: translatey(100%);
+    cursor: pointer;
+}
+#sobe.visible{
+    visibility: visible;
+    opacity: 0.6;
+    transform: translateY(0);
+}
+/* Estilos para dispositivos maiores que 768px */
+@media (min-width: 768px) {
+    .container {
+        width: 80%; /* Reduz a largura do container */
+    }
+}
+
+/* Estilos para dispositivos maiores que 1024px */
+@media (min-width: 1024px) {
+    nav {
+        font-size: 1.8rem; /* Aumenta o tamanho da fonte do menu */
+    }
+}
+
+/* Estilos para dispositivos menores que 768px */
+@media (max-width: 767px) {
+    .content {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do conteúdo */
+    }
+}
+
+/* Estilos para dispositivos menores que 480px */
+@media (max-width: 480px) {
+    .btnOrc {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do botão de orçamento */
+    }
+    .textoSobre,
+    .textoLoc {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do texto sobre e texto de localização */
+    }
+    .dados {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte dos dados de contato */
+    }
+    .logo {
+        width: 80px; /* Reduz o tamanho do logo */
+    }
+    .nome-header {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do cabeçalho */
+    }
+}
+
+/* Estilos para dispositivos menores que 360px */
+@media (max-width: 360px) {
+    .btnOrc {
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do botão de orçamento */
+    }
+    .textoSobre,
+    .textoLoc {
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do texto sobre e texto de localização */
+    }
+    .dados {
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte dos dados de contato */
+    }
+    .nome-header {
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do cabeçalho */
+    }
+}
+
+/* Adiciona estilos específicos para dispositivos com orientação paisagem */
+@media (orientation: landscape) {
+    .content {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte do conteúdo */
+    }
+    .dados {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte dos dados de contato */
+    }
+}
