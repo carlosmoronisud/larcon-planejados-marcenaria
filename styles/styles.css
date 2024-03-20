@@ -417,3 +417,17 @@ textarea{
     }
    
 }
+@media screen and (max-width: 414px){
+
+    form{
+        border: 1px solid rgba(0, 0, 0, 0.555);
+        transform: translate(0%, -10%);
+        height: 70%;
+    }
+    .carrocelSalas,
+    .cardLoc,
+    .carouselCoz{
+        transform: translate(0%, 0%);
+        height: 70%;
+    }
+}
