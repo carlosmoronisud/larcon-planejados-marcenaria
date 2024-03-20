@@ -197,6 +197,7 @@ textarea{
     border-radius: 20px;
     padding: 10px;
     z-index: 2;
+    margin: 10px;
 }
 .slide{
     width: 100%;
@@ -309,7 +310,7 @@ textarea{
 #sobe{
     position: fixed;
     right: 10px;
-    bottom: 60px;
+    bottom: 30px;
     width: 7vw;
     opacity: 0;
     visibility: hidden;
