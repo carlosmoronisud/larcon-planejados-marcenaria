@@ -8,7 +8,135 @@
 </head>
 <body>
     <div class="container" id="home">
+        <header><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Larcon Planejados</title>
+</head>
+<body>
+    <div class="container" id="home">
         <header>
+            <div class="nome-header">
+                <img src="imagens/logo.jpeg" alt="" class="logo">
+                <h6>Larcon<br>Planejados</h6>
+            </div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#orc">Orçamento</a>
+                <a href="#fts">Fotos</a>
+                <a href="#loc">Localização</a>
+                <a href="#conts">Contatos</a>
+            </nav>
+        </header>
+        <main>
+            <section class="ap" id="home">
+                <video autoplay muted loop class="background-video">
+                    <source src="imagens/cozinha g1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                </video>
+                <div class="content">
+                    <h1>Transforme seu ambiente</h1>                    
+                        <a href="#orc" class="btnOrc">Clique aqui e faça acontecer</a>                    
+                </div>
+            </section>
+        <section id="sobre">
+            <img src="imagens/cozinha2 (1).png" alt="imagem cozinha2" class="fundoSobre">
+            <section class="cardSobre">
+                <img src="imagens/cozinha1 (1).jpg" alt="cozinha1" class="imgsobre">
+                <div class="textoSobre">
+                    <p>Com 25 anos de experiência e uma equipe qualificada, estamos prontos para atender às suas necessidades de móveis personalizados de alta qualidade.</p>
+                </div>
+            </section>
+        </section>
+        <section id="orc"><img src="imagens/sala rack.jpg" alt="imagem sala rack2" class="fundoOrc">
+            <section class="cardOrc">
+                <form id="orcForm" method="post" action="enviar_email.php">
+                   <div class="inputText">
+                    <input type="text" id="nome" nome="nome" placeholder=" Nome:"><br><br>
+                    <input type="text" id="email" nome="email" placeholder=" Email:"><br><br>
+                    <input type="tel" id="tel" nome="tel" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder=" Telefone:"><br><br>
+                   </div>
+                    <div class="textArea">
+                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="  Eu gostaria de solicitar um orçamento,  poderia me contatar pelo WhatsApp?"></textarea><br>
+                    <input id="enviar" type="button" value="Enviar" onclick="Enviar()">
+                    </div>
+                </form>
+            </section>
+        </section>
+        <section id="fotosRacks">
+            <img src="imagens/salarack3.jpg" alt="imagem sala rack3" class="fundoRacks">
+            <section id="fts">
+                <div class="textoRacks">
+                    <h2>Inspire-se</h2>
+                    <h3>Salas</h3>
+                </div>
+                <section class="carrocelSalas" id="img">
+                    <div class="slide"><img src="imagens/sala1.jpeg" alt="sala1" class="rack1"></div>
+                    <div class="slide"><img src="imagens/sala2.jpg" alt="sala2" class="rack2"></div>
+                    <div class="slide"><img src="imagens/sala3.jpg" alt="sala3" class="rack3"></div>
+                    <div class="slide"><img src="imagens/salarack1.jpg" alt="sala4" class="rack4"></div>
+                    <div class="slide"><img src="imagens/salarack2.jpg" alt="sala5" class="rack5"></div>
+                    <div class="slide"><img src="imagens/salarack3.jpg" alt="sala6" class="rack6"></div>              
+                </section>
+                <button id="prevBtnSala"><</button>
+                <button id="nextBtnSala">></button>
+            </section>
+        </section>
+        <section id="fotosCoz">
+            <img src="imagens/coz8.jpg" alt="imagem Cozinha 8" class="fundoCoz">              
+            <section class="coz">
+                <div class="textoCoz">
+                    <h2>Inspire-se</h2>
+                    <h3>Cozinhas</h3>
+                </div>
+                <div class="carouselCoz">
+                    <div class="slide"><img src="imagens/cozinha1 (1).jpg" alt="coz1" class="coz1"></div>                   
+                    <div class="slide"><img src="imagens/cozinha2 (1).png" alt="coz2" class="coz2"></div>
+                    <div class="slide"><img src="imagens/coz3.jpg" alt="coz3" class="coz3"></div>
+                    <div class="slide"><img src="imagens/coz6.jpg" alt="coz4" class="coz4"></div>                    
+                    <div class="slide"><img src="imagens/coz5.jpg" alt="sala5" class="coz5"></div>
+                    <div class="slide"><img src="imagens/coz4.jpg" alt="sala6" class="coz6"></div>                                
+                </div>
+                <button id="prevBtnCoz"><h1><</h1></button>
+                <button id="nextBtnCoz"><h1>></h1></button>
+            </section>
+        </section>
+        <section id="loc"><img src="imagens/sobre-fundo.jpeg" alt="imagem localização fundo" class="fundoLoc">
+            <section class="cardLoc">
+                <a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqCAgDEEUYJxg7MgkIABBFGDkYgAQyBggBEEUYPDIGCAIQRRg8MggIAxBFGCcYOzIICAQQRRgnGDsyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQg4MTc3ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KSE9Quqsv8iUMW3lQ4DJPBAl&daddr=Av.+Em%C3%ADlio+B%C3%B4sco,+2191b+-+Mat%C3%A3o,+Sumar%C3%A9+-+SP,+13179-132" class="loc"><img src="imagens/loc.png" alt="Localização" class="loc"></a>            
+                <div class="textoLoc">
+                    <h3>Av. Emílio Bôsco, 2191b - Matão, Sumaré - SP, 13179-132</h3>
+                </div>
+            </section>
+        </section>
+        <section class="social">
+            <a href="https://wa.me/5519981557379" class="zap"><img src="imagens/zap.png" alt="" class="whats"></a>
+            <a href="https://www.instagram.com/larconnplanejados/" class="inst"><img src="imagens/insta.png" alt="Insta logo" class="instagram"></a>
+            <a href="https://www.facebook.com/larconnplanejados?_rdc=1&_rdr" class="face"><img src="imagens/face.png" alt="Face" class="facebook"></a>
+        </section>
+        <a href="#home"><img id="sobe" src="imagens/anterior.png" alt="sobe"></a>
+        </main>
+        <footer>            
+        <section class="dados" id="conts">
+           
+            <div class="nome">
+                 <img src="imagens/logo.jpeg" alt="Logo" class="logo">
+                <h6>Larcon<br>Planejados</h6>
+            </div>
+            <div class="Telefone"> <h6>Tel: (19) 98155-7379<br>larconplanejados@gmail.com</h6>
+            </div>
+        </section>
+        </footer>
+        <a href="https://pessoal-6cen.vercel.app/" class="autor"><h6>By:CMDev</h6></a>
+    </div>
+
+  <script src="scripts/carousel.js"></script>
+    
+</body>
+</html>
             <div class="nome-header">
                 <img src="imagens/logo.jpeg" alt="" class="logo">
                 <h6>Larcon<br>Planejados</h6>
