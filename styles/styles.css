@@ -196,7 +196,7 @@ textarea{
     background-color: #0000007a;
     border-radius: 20px;
     padding: 10px;
-    z-index: 2;
+    z-index: 4;
     margin: 10px;
 }
 .slide{
