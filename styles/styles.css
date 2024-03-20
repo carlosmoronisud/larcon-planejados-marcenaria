@@ -55,7 +55,7 @@ a:hover{
     
 }
 .content{
-    width: 60vw;
+    width: 100%;
     align-items: center;
     padding: 20px;  
     font-size: 2em;
