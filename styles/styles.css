@@ -4,28 +4,34 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
-    color: #ffffff;      
+    color: #ffffff;   
+    overflow-x: hidden;   
 }
 body{                    
     box-sizing: content-box;    
     background-color: black;
-    width: 100%;        
+    width: 100%;    
+           
 }
 .container {
-    width: 90%; /* Ajustado para 90% */
+    width: 90vw; /* Ajustado para 90% */
     margin: 0 auto; /* Centralizado horizontalmente */
+    display: flex;
+    flex-direction: column;
 }
 .logo {
-    width: 100%;
+    width: 5vw;
     height: auto;
-    margin-right: 20px; /* Espaçamento entre logo e nav */
+    margin-right: 10px;
+    
 }
 nav{
-    margin: 10px;
-    font-size: 50%;   
+    display: flex;
+    font-size: 1.5rem;
+    gap: 20px;
+    margin: 10px;    
 }
 a{
-    margin: 5px;
     text-decoration: none;
 }
 a:hover{
@@ -34,30 +40,34 @@ a:hover{
 }
 .ap {
     position: relative; /* Define posição relativa para os elementos internos */
-    height: 100vh; /* Altura da seção */
-    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
-    margin-bottom: 50px;
+    height: 75vh; /* Altura da seção */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */ 
+    margin-bottom: 3rem;   
 }
 .background-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90vw;
+    height: 75vh;
     object-fit: cover;
     border-radius: 30px;
+    
 }
 .content{
-    font-size: 100%;
+    width: 60vw;
+    align-items: center;
+    padding: 20px;  
+    font-size: 2em;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: white;    
 }
-.btnOrc {
-    font-size: 100%;
+
+.btnOrc {    
     padding: 5px;
     background-color: #000000;
     color: white;
@@ -69,27 +79,41 @@ a:hover{
 }
 #sobre,
 #orc,
-#fotosRacks,
-#fotosCoz,
 #loc{
+    position: relative; /* Define posição relativa para os elementos internos */
+    height: 85vh; /* Altura da seção */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
+    margin-bottom: 50px;
+}
+#fotosRacks,
+#fotosCoz{
     position: relative; /* Define posição relativa para os elementos internos */
     height: 100vh; /* Altura da seção */
     overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
     margin-bottom: 50px;
+
 }
 .fundoSobre,
 .fundoOrc,
-.fundoRacks,
-.fundoCoz,
 .fundoLoc{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    
     object-fit: cover;
     border-radius: 30px;    
 }
+.fundoRacks,
+.fundoCoz{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    object-fit: cover;
+    border-radius: 30px;
+}
+
 .cardSobre,
 .cardLoc{
     position: absolute;
@@ -103,6 +127,8 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.74);
     overflow: hidden;
 }
+
+
 .imgsobre{
     border-radius: 20px;
     width: 65%;
@@ -160,7 +186,7 @@ textarea{
 }
 .textoRacks,
 .textoCoz {
-    font-size: 2rem; /* Reduzindo o tamanho da fonte */
+    font-size: 1.5rem; /* Reduzindo o tamanho da fonte */
     position: absolute;
     top: 10%;
     left: 10%;
@@ -175,13 +201,18 @@ textarea{
 .slide{
     width: 100%;
     display: none; /* Oculta os slides por padrão */
+    
+}
+.slide img{
+    width: 100%;
+    height: 99%;
 }
 #prevBtnCoz,
 #nextBtnCoz,
 #prevBtnSala,
 #nextBtnSala{
     color: rgb(255, 255, 255);
-    font-size: 50px ;
+    font-size: 2rem ;
     background-color: #00000085;
     padding: 1%;
     border-radius: 40px;
@@ -192,10 +223,11 @@ textarea{
     position: absolute;
     display: flex;
     justify-content: center;   
-    top: 10%;
-    bottom: 10%;
-    left: 5%;
-    right: 5%;
+    top: 5%;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    transform: translate(0%, 10%);
     border: 30px solid rgba(0, 0, 0, 0.555);
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.74);
@@ -247,11 +279,7 @@ textarea{
     display: flex;
     align-items: center; 
 }
-.logo {
-    width: 100px;
-    height: auto;
-    margin-right: 20px; /* Espaçamento entre logo e nav */
-}
+
 .nome-header {
     font-size: 1.5rem;
     
@@ -294,70 +322,95 @@ textarea{
     opacity: 0.6;
     transform: translateY(0);
 }
-/* Estilos para dispositivos maiores que 768px */
-@media (min-width: 768px) {
-    .container {
-        width: 80%; /* Reduz a largura do container */
+@media screen and (max-width: 768px) {
+
+    #sobre{
+        height: 50%;
+    }
+    .logo{
+        width: 10vw;
+    }
+    a,
+    nav{
+        font-size: 0.5rem; /* Reduza o tamanho do texto em dispositivos menores */
+    }
+    
+    h1{
+        font-size: 1.5rem; /* Reduza o tamanho do texto em dispositivos menores */
+    }
+    h6{
+        font-size: 0.6rem; /* Reduza o tamanho do texto em dispositivos menores */
     }
 }
-
-/* Estilos para dispositivos maiores que 1024px */
-@media (min-width: 1024px) {
-    nav {
-        font-size: 1.8rem; /* Aumenta o tamanho da fonte do menu */
+@media screen and (max-width: 768px) {
+    #sobre,
+    #orc,
+    #loc,
+    .fundoSobre{
+        height: 30vh;
     }
 }
+@media screen and (max-width: 768px) {
+    .cardSobre,
+    .cardLoc,
+    #orcForm
+    #fts{
+        display: flex;
+        height: 80%;
+        display: flex;
+        top: 10%;       
+        left: 5%;
+        border: 3px solid black;
+        
+    }
+    .textoLoc,
+    .textoSobre{
 
-/* Estilos para dispositivos menores que 768px */
-@media (max-width: 767px) {
-    .content {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte do conteúdo */
+        font-size: 0.7rem;
     }
-}
+    input{
+        font-size: 0.8rem;
+    }
+    .inputText{
+        font-size: 0.1rem;
+    }
+    #enviar{
+        padding: 1px;
+        font-size: 0.8rem;
+    }
+    textarea{
+        height: 60%;
+        font-size: 0.5rem;
+    }
+    #fotosRacks,
+    #fotosCoz{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 30vh;
+        
+    }
+    .textoRacks,
+    .textoCoz{
+        font-size: 0.5rem;
+        transform: translate(-50%, -50%);
+        padding: 5px;
+    }
+    .carrocelSalas,
+    .carouselCoz{
+        border: 3px solid black;
+        height: 90%;
+        transform: translate(0%, -3%);        
+    }
+    button{
+        font-size: rem;
 
-/* Estilos para dispositivos menores que 480px */
-@media (max-width: 480px) {
-    .btnOrc {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte do botão de orçamento */
     }
-    .textoSobre,
-    .textoLoc {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte do texto sobre e texto de localização */
+    .slide img{
+        height: 99%;
     }
-    .dados {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte dos dados de contato */
+    .autor{
+        font-size: 0.5;
     }
-    .logo {
-        width: 80px; /* Reduz o tamanho do logo */
-    }
-    .nome-header {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte do cabeçalho */
-    }
-}
-
-/* Estilos para dispositivos menores que 360px */
-@media (max-width: 360px) {
-    .btnOrc {
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do botão de orçamento */
-    }
-    .textoSobre,
-    .textoLoc {
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do texto sobre e texto de localização */
-    }
-    .dados {
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte dos dados de contato */
-    }
-    .nome-header {
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do cabeçalho */
-    }
-}
-
-/* Adiciona estilos específicos para dispositivos com orientação paisagem */
-@media (orientation: landscape) {
-    .content {
-        font-size: 1.8rem; /* Ajusta o tamanho da fonte do conteúdo */
-    }
-    .dados {
-        font-size: 1.8rem; /* Ajusta o tamanho da fonte dos dados de contato */
-    }
+   
 }
