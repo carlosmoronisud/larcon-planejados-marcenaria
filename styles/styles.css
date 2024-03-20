@@ -326,7 +326,7 @@ textarea{
 p{
     font-size: 100%;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 768px) {
 
     #sobre{
         height: 50%;
@@ -346,7 +346,7 @@ p{
         font-size: 0.6rem; /* Reduza o tamanho do texto em dispositivos menores */
     }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 768px) {
     #sobre,
     #orc,
     #loc,
@@ -354,7 +354,7 @@ p{
         height: 30vh;
     }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 768px) {
     .cardSobre,
     .cardLoc,
     #orcForm
