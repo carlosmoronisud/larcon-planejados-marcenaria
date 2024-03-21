@@ -42,7 +42,7 @@ a:hover{
     position: relative; /* Define posição relativa para os elementos internos */
     height: 75vh; /* Altura da seção */
     overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */ 
-    margin-bottom: 3rem;   
+    margin-bottom:10px;   
 }
 .background-video {
     position: absolute;
@@ -69,7 +69,7 @@ a:hover{
 
 .btnOrc {    
     padding: 5px;
-    background-color: #000000;
+    background-color: #b19898;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -83,14 +83,15 @@ a:hover{
     position: relative; /* Define posição relativa para os elementos internos */
     height: 85vh; /* Altura da seção */
     overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 #fotosRacks,
 #fotosCoz{
     position: relative; /* Define posição relativa para os elementos internos */
-    height: 100vh; /* Altura da seção */
+    height: 80vh; /* Altura da seção */
     overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites */
-    margin-bottom: 50px;
+    margin-bottom:  10px;
+    
 
 }
 .fundoSobre,
@@ -99,8 +100,7 @@ a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    
+    width: 100%;    
     object-fit: cover;
     border-radius: 30px;    
 }
@@ -109,7 +109,8 @@ a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;    
+    width: 100%;
+    height: 100%;  
     object-fit: cover;
     border-radius: 30px;
 }
@@ -142,7 +143,7 @@ a:hover{
     font-size: 2rem;
     overflow: auto; /* Adicione scroll quando o texto for muito longo */
 }
-form{
+/* form{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -155,8 +156,8 @@ form{
     background-color: rgba(0, 0, 0, 0.74);
     overflow: hidden; 
     gap: 20px;
-}
-.inputText{
+} */
+/* .inputText{
     width: 50%; 
     background-color: transparent;
     display: flex;
@@ -183,7 +184,7 @@ textarea{
 }
 #enviar{
     padding: 10px;   
-}
+} */
 .textoRacks,
 .textoCoz {
     font-size: 1.5rem; /* Reduzindo o tamanho da fonte */
@@ -219,15 +220,23 @@ textarea{
     border-radius: 40px;
     border: 1px solid white;
 }
+#prevBtnCoz:hover,
+#nextBtnCoz:hover,
+#prevBtnSala:hover,
+#nextBtnSala:hover{
+    background-color: #00587A;
+    color: #ffffff;
+    cursor: pointer;  
+}
 .carrocelSalas,
 .carouselCoz{
     position: absolute;
     display: flex;
     justify-content: center;   
-    top: 5%;
+    top: -5%;
     bottom: 20%;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     transform: translate(0%, 10%);
     border: 10px solid rgba(0, 0, 0, 0.555);
     border-radius: 20px;
@@ -351,7 +360,7 @@ p{
     #orc,
     #loc,
     .fundoSobre{
-        height: 30vh;
+        height: 50vh;
     }
 }
 @media screen and (max-width: 768px) {
@@ -394,7 +403,7 @@ p{
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 30vh;
+        height: 35vh;
         
     }
     .textoRacks,
@@ -415,22 +424,26 @@ p{
     }
     .slide img{
         height: 99%;
-    }
-    
-   
+    }   
 }
-@media screen and (max-width: 414px){
+@media screen and (max-width: 430px){
 
-    form{
+    /* form{
         border: 1px solid rgba(0, 0, 0, 0.555);
         transform: translate(0%, -10%);
         height: 70%;
-    }
+    } */
     .carrocelSalas,
-    .cardLoc,
     .carouselCoz{
-        transform: translate(0%, 0%);
-        height: 70%;
+        transform: translate(0%, 20%);
+        height: 75%;
+    }
+    .cardLoc{
+        height: 85%;
+        transform: translate(0%, -10%);
+    }
+    #loc{
+        height: 30vh;
     }
     
 }
